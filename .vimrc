@@ -48,6 +48,10 @@ set showmatch      "対応する括弧を表示する
 "inoremap <silent><ESC><ESC>:set iminsert=0<CR>
 "set imdisable
 
+"保存時にtabをスペースに変換
+autocmd BufWritePre * :%s/\t/  /ge
+
+
 let g:rsenseHome = "/Users/aki_/opt"
 
 "Ruby/Rails関連 Bundle
@@ -96,6 +100,9 @@ nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
 nnoremap <silent> ,uu :<C-u>Unite buffer file_mru<CR>
 " 全部乗せ
 nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+
+" アウトライン
+nnoremap <silent> ,uo :<C-u>Unite outline<CR>
 
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
