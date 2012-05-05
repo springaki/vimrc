@@ -49,7 +49,7 @@ set showmatch      "対応する括弧を表示する
 "set imdisable
 
 "保存時にtabをスペースに変換
-autocmd BufWritePre * :%s/\t/  /ge
+"autocmd BufWritePre * :%s/\t/  /ge
 
 
 let g:rsenseHome = "/Users/aki_/opt"
@@ -63,6 +63,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'quickrun.vim'
 
 
+Bundle 'ZenCoding.vim'
 "-----入力補完-----
 Bundle 'neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
@@ -110,3 +111,4 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
 nmap <C-k> :bN<CR>
 nmap <C-j> :bn<CR>
+nmap <C-w> :bdelete<CR>
