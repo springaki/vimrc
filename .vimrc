@@ -1,7 +1,25 @@
-"vundle 使用
+"NeoBundle 使用
+set nocompatible
 filetype off
-set rtp+=~/.vim/vundle.git/
-call vundle#rc()
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+
+NeoBundle 'git://github.com/Shougo/clang_complete.git'
+NeoBundle 'git://github.com/Shougo/echodoc.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/Shougo/vim-vcs.git'
+NeoBundle 'git://github.com/Shougo/vimfiler.git'
+NeoBundle 'git://github.com/Shougo/vimshell.git'
+NeoBundle 'git://github.com/Shougo/vinarise.git'
+
+filetype plugin on
+filetype indent on
 
 "-----基本設定-----
 set backspace=indent,eol,start "バックスペースで何でも消せる
@@ -54,37 +72,31 @@ set showmatch      "対応する括弧を表示する
 
 let g:rsenseHome = "/Users/aki_/opt"
 
-"Ruby/Rails関連 Bundle
-Bundle 'rails.vim'
-Bundle 'cucumber.zip'
+"Ruby/Rails関連 NeoBundle
+NeoBundle 'rails.vim'
+NeoBundle 'cucumber.zip'
 
 "https://github.com/vim-ruby/vim-ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'quickrun.vim'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'quickrun.vim'
 
 
-Bundle 'ZenCoding.vim'
+NeoBundle 'ZenCoding.vim'
 "-----入力補完-----
-Bundle 'neocomplcache'
+NeoBundle 'neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_list = 30
 let g:neocomplcache_auto_completion_start_length = 2
 let g:neocomplcache_enable_underbar_completion = 1
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 
-Bundle 'neco-look'
-Bundle 'ujihisa/shadow.vim'
-
-"omni補完を使う設定
-filetype on
-filetype indent on
-filetype plugin on
-
+NeoBundle 'neco-look'
+NeoBundle 'ujihisa/shadow.vim'
 
 "unite
-Bundle 'unite.vim'
-Bundle 'h1mesuke/unite-outline'
-Bundle 'smartchr'
+NeoBundle 'unite.vim'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'smartchr'
 
 """ unite.vim
 " 入力モードで開始する
