@@ -17,9 +17,15 @@ NeoBundle 'git://github.com/Shougo/vim-vcs.git'
 NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimshell.git'
 NeoBundle 'git://github.com/Shougo/vinarise.git'
+NeoBundle 'git://github.com/Shougo/vinarise.git'
+
+""""""" vim-scripts repos
+" プロジェクトのツリー表示
+NeoBundle 'vim-scripts/project.tar.gz'
 
 filetype plugin on
 filetype indent on
+set shiftwidth=2
 
 "-----基本設定-----
 set backspace=indent,eol,start "バックスペースで何でも消せる
