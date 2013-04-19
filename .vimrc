@@ -4,9 +4,8 @@ filetype off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundle 'git://github.com/Shougo/clang_complete.git'
 NeoBundle 'git://github.com/Shougo/echodoc.git'
@@ -17,7 +16,7 @@ NeoBundle 'git://github.com/Shougo/vim-vcs.git'
 NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimshell.git'
 NeoBundle 'git://github.com/Shougo/vinarise.git'
-NeoBundle 'git://github.com/Shougo/vinarise.git'
+NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
 
 """"""" vim-scripts repos
 " プロジェクトのツリー表示
@@ -89,7 +88,6 @@ NeoBundle 'quickrun.vim'
 
 NeoBundle 'ZenCoding.vim'
 "-----入力補完-----
-NeoBundle 'neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_list = 30
 let g:neocomplcache_auto_completion_start_length = 2
@@ -99,9 +97,6 @@ imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>
 NeoBundle 'neco-look'
 NeoBundle 'ujihisa/shadow.vim'
 
-"unite
-NeoBundle 'unite.vim'
-NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'smartchr'
 
 """ unite.vim
@@ -129,4 +124,4 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
 nmap <C-k> :bN<CR>
 nmap <C-j> :bn<CR>
-nmap <C-w> :bdelete<CR>
+"nmap <C-w> :bdelete<CR>
