@@ -9,10 +9,10 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 "NeoBundle 'Shougo/clang_complete.git'
+NeoBundle 'git://github.com/kien/ctrlp.vim.git'
 NeoBundle 'Shougo/echodoc.git'
 NeoBundle 'Shougo/neocomplcache.git'
 NeoBundle 'Shougo/neosnippet.git'
-NeoBundle 'Shougo/neocomplcache-snippets-complete'
 NeoBundle 'Shougo/neobundle.vim.git'
 NeoBundle 'Shougo/unite.vim.git'
 NeoBundle 'Shougo/vim-vcs.git'
